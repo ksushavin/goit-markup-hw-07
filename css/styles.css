@@ -1,0 +1,1101 @@
+:root {
+  /* Основные шрифты */
+  --main-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Цвет текста */
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --white-text-color: #ffffff;
+  --footer-contacts-text: rgba(255, 255, 255, 0.6);
+  --accent-text-color: #2196f3;
+
+  /* Цвет фона */
+  --background-color: #ffffff;
+  --secondary-backgraund-color: #f5f4fa;
+  --dark-background-color: #2f303a;
+
+  /* Цвет icons svg*/
+  --icons-color: #afb1b8;
+
+  /* Основной паддинг и маржин в секциях */
+  --primary-section-padding: 94px;
+  --primary-margin: 30px;
+
+  /* Анимация */
+  --anim-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+body {
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+}
+
+/* Общий сброс маржинов */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ховер и фокус для всех ссылок.*/
+.link:hover,
+.link:focus {
+  color: var(--accent-text-color);
+}
+
+/* Убираем нижнее подчеркивание с ссылок */
+.link {
+  text-decoration: none;
+  transition: color var(--anim-main);
+}
+
+/* Убираем отступы и маркеры на списках */
+.list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  list-style: none;
+}
+
+/* Общие стили на класс секция */
+.section {
+  padding-top: var(--primary-section-padding);
+  padding-bottom: var(--primary-section-padding);
+}
+
+/* Общие стили для контейнера */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Общий шрифт для h2 */
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+
+/* Header/////////////////// */
+
+/* Нижний бордер на хедере */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+/* Добавляем флексы на основной контейнер хедера */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Логотип в хедере и футере */
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-text-color);
+  text-decoration: none;
+}
+
+.logo-primary {
+  color: #000000;
+  transition: color var(--anim-main);
+}
+
+.logo-secondary {
+  color: var(--white-text-color);
+  transition: color var(--anim-main);
+}
+
+.nav > .logo {
+  margin-right: 93px;
+}
+
+/* Добавляем флексы на ссылки хедера */
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+/* Маржины на ссылки навигации */
+.nav-item {
+  margin-right: 50px;
+}
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+/* Добавление паддингов на ссылки навигации */
+.nav-link {
+  position: relative;
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+
+  transition: color var(--anim-main);
+}
+
+/* Выделение цветом текущей страницы */
+.current {
+  color: var(--accent-text-color);
+}
+
+/* Добавляем линию под текущей страницей */
+.current::after {
+position: absolute;
+left: 0;
+bottom: -1px;
+
+content: "";
+display: block;
+width: 100%;
+height: 4px;
+border-radius: 2px;
+background-color: var(--accent-text-color);
+}
+
+
+
+/* Добавляем флексы на контакты в хедере */
+.header-contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-contacts-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Контакты в хедере */
+.header-phone,
+.header-mail {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+
+  transition: color var(--anim-main);
+}
+
+.header-contacts-icons {
+  fill: currentColor;
+  margin-right: 10px;
+
+  transition: fill var(--anim-main);
+}
+
+
+
+/* Секция Герой //////////////*/
+
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+
+  background-color: #C4C4C4;
+  background-image: linear-gradient( to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.hero-title {
+  display: block;
+  width: 696px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
+
+/* Кнопка заказать услугу */
+.hero-btn {
+  padding: 10px 32px;
+  border: 0;
+  border-radius: 4px;
+  
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  
+  transition: background-color var(--anim-main),
+  box-shadow var(--anim-main);
+}
+
+.hero-btn:hover {
+  background-color: #188ce8;
+}
+
+/* Секция features */
+
+/* Скрытый заголовок */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-item {
+  margin-right: 30px;
+}
+.feature-item:last-child {
+  margin-right: 0;
+}
+
+.features-icon-wrapper {
+  display: flex;
+  flex-basis: 270px;
+  height: 120px;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: #F5F4FA;
+
+  margin-bottom: 30px;
+}
+
+.feature-title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+}
+.feature-text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}
+
+/* Секция Services */
+
+/* Флексы для секции services*/
+.services.section {
+  padding-top: 0;
+}
+
+.services-list {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+.services-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+
+/* Позиционнированный текст на картинках секции  Services */
+
+.services-pic-wrapper {
+  position: relative;
+}
+
+.services-descr {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 370px;
+  height: 70px;
+  background-color:rgba(47, 48, 58, 0.8);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+}
+
+
+/* Секция team */
+.team {
+  background-color: #f5f4fa;
+}
+
+.team-list {
+  display: flex;
+  margin-top: 50px;
+}
+
+/* Определяем ширину для 4 team-item */
+.team-item {
+  flex-basis: calc((100% - 90px) / 4);
+  margin-right: 30px;
+  background-color: var(--background-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-item:last-child {
+  margin-right: 0;
+}
+
+/*Паддинги для team-content */
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-names {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.team-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+/* Соцсети для team */
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  color: var(--icons-color);
+
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: background-color var(--anim-main), color var(--anim-main);
+}
+
+
+.socials-links:hover,
+.socials-links:focus {
+  background-color: var(--accent-text-color);
+  color: #ffff;
+}
+
+.socials-icon {
+  fill: currentColor;
+  /* transition: fill var(--anim-main); */
+}
+
+
+/* Секция Постоянные клиенты */
+/* ///////////////////////// */
+
+.cliens-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #afb1b8; 
+  color: var(--icons-color);
+  transition: border-color var(--anim-main), color var(--anim-main);
+  
+}
+
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-text-color);
+}
+
+.clients-icon {
+  display: block;
+  fill: currentColor;
+}
+
+
+
+/*-- Страница портфолио main ------*/
+/* /////////////////////////////// */
+
+/* Фильтр кнопки*/
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Кнопки фильтра */
+.filter-button {
+  padding: 6px 22px;
+  border: 0;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  color: var(--primary-text-color);
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: color var(--anim-main), background-color var(--anim-main), box-shadow var(--anim-main);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Сетка для карточек портфолио с одинаковым маржином 30рх */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--primary-margin));
+  margin-left: calc(-1 * var(--primary-margin));
+}
+
+.projects-item {
+  flex-basis: calc(100% / 3 - var(--primary-margin));
+  margin-left: var(--primary-margin);
+  margin-top: var(--primary-margin);
+}
+
+
+.projects-link {
+  display: block;
+  box-shadow: none;
+  transition: box-shadow var(--anim-main);
+  }
+
+.projects-link:hover,
+.projects-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+/* Добавляем текст поверх картинки */
+.pic-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-descr {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.55;
+
+  width: 100%;
+  height: 100%;
+
+  color: var(--white-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  
+  transition: transform var(--anim-main);
+}
+
+
+.projects-link:focus .project-descr,
+.projects-link:hover .project-descr
+{
+  transform: translateY(0%); 
+}
+
+
+
+/* Группируем заголовок и текст и дабавляем бордер в нижнюю часть */
+.projects-content {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+
+
+/* Шрифты projects портфолио" */
+.projects-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+}
+
+.projects-text {
+  margin-top: 4px;
+
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--secondary-text-color);
+}
+
+
+
+/* Футер */
+
+/* Основные отступы секции футер */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--dark-background-color);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-wrapper {
+  margin-right: 70px;
+}
+
+/* Нижний маржин для лого футера */
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.footer-address {
+  display: block;
+  width: 231px;
+}
+
+/* Марджины между footer-address-item */
+.footer-address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+/* Текст адреса */
+.footer-address-link {
+  display: inline-block;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--white-text-color);
+}
+.footer-email,
+.footer-phone {
+  display: inline-block;
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.footer-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  margin-bottom: 20px;
+}
+
+.footer .socials-links {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--anim-main);
+}
+
+.footer .socials-links:hover,
+.footer .socials-links:focus {
+  background-color: var(--accent-text-color);
+}
+
+
+.footer-form {
+  margin-left: 93px;
+}
+
+.footer-form-text {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: #FFFFFF; 
+}
+
+
+.footer-input-form {
+  width: 353px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  font-size: 16px;
+  line-height: 1.25;
+  
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--dark-background-color);
+}
+
+
+.footer-form-btn {
+  display: inline-flex;
+  padding: 10px 28px 10px 28px;
+  border: 0;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  align-items: center;
+  letter-spacing: 0.06em;
+
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  transition: background-color var(--anim-main),
+  box-shadow var(--anim-main);
+}
+
+.footer-form-btn:hover {
+  background-color: #188ce8;
+}
+
+.footer-form-icon {
+  margin-left: 10px;
+}
+
+
+
+
+
+  /* ///////Модальное окно////////////////////// */
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    /* Обязательно также указываем в транзишине свойство visibility, иначе при закрытии модалки не сработает анимация  */
+    transition: opacity var(--anim-main), visibility var(--anim-main);}
+
+
+  /* Прячем бекдроп при классе is-hidden */
+  .backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  } 
+
+  /* Задаем исходное состояние окна в спрятанном состоянии для его анимации: 
+  появляется с масштаба 0,8 с центра (если поменять местами транслейт и склейл - окно будет всплывать из нижнего правого своего угла!!!). И при таком способе не забываем указывать транслейт !! либо такой же как в modal-wrapper либо другие координаты по желанию либо макету */
+  .backdrop.is-hidden .modal-wrapper {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+
+  .modal-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--anim-main);
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    fill: #000000;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: fill var(--anim-main);
+  } 
+
+  .modal-close-btn:hover {
+    fill: var(--accent-text-color);
+  }
+
+
+
+/* ////// ФОРМА //////////////////// */
+
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 40px 39px 40px 41px;
+}
+
+.modal-descr {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: #212121;
+}
+
+.form-field {
+  position: relative;
+
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  
+  color: #757575;
+}
+
+.form-input-wrapper {
+  position: relative;
+  
+}
+
+.form-input {
+  display: block;
+
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 4px 10px 4px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition: border-color var(--anim-main);
+}
+
+.form-input:focus {
+  border-color: var(--accent-text-color) ;
+}
+
+.form-icon {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: #212121;
+
+  transform: translateY(-50%);
+  transition: fill var(--anim-main);
+}
+
+
+/* При фокусе на инпут первый сосед - иконка меняет цвет */
+.form-input:focus + .form-icon {
+  fill: var(--accent-text-color);
+}
+
+/* Поле комментарий */
+
+.form-comment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fild-comment {
+  resize: none;
+
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-fild-comment:focus {
+  border-color: var(--accent-text-color);
+}
+
+/* Чекбокс формы */
+.form-field-policy {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.form-policy-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  
+  color: #757575;
+}
+
+.form-policy-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Рисуем кастомный чекбокс */
+/* Рамка */
+.form-policy-icon {
+  position: relative;
+
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  background-color: #ffffff;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  transition: background-color var(--anim-main), border-color var(--anim-main);
+}
+
+.form-policy-input:focus + .form-policy-icon {
+ border-color: var(--accent-text-color); 
+}
+
+.form-policy-input:checked + .form-policy-icon {
+  background-color: var(--accent-text-color);
+  border-color: var(--accent-text-color); 
+  background-origin: border-box;
+}
+
+
+
+/* Инлайн свг отдельной галочки */
+.form-policy-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-policy-link {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--accent-text-color);
+}
+
+/* Кнопка Отправить в модалке */
+.form-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px 10px 56px;
+  border: 0;
+  border-radius: 4px;
+  
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+
+  transition: background-color var(--anim-main);
+}
+
+.form-btn:hover {
+background-color: #188CE8;
+}
+
+
+
+
+
+
+
+
+
+  
+
