@@ -1,0 +1,36 @@
+/* Добавляем флексы на контакты в хедере */
+.header__contacts-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header__contacts-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+/* Контакты в хедере */
+.header__phone,
+.header__mail {
+    display: flex;
+    align-items: center;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--secondary-text-color);
+
+    transition: color var(--anim-main);
+}
+
+.header__icon {
+    fill: currentColor;
+    margin-right: 10px;
+
+    transition: fill var(--anim-main);
+}
