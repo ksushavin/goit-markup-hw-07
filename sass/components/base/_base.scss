@@ -20,8 +20,8 @@ img {
 }
 
 /* Ховер и фокус для всех ссылок.*/
-.link:hover,
-.link:focus {
+a:hover,
+a:focus {
     color: var(--accent-text-color);
 }
 
@@ -42,7 +42,7 @@ img {
 }
 
 /* Общий шрифт для h2 */
-.title {
+.section__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;

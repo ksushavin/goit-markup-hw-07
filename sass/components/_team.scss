@@ -1,9 +1,9 @@
 /* //////Секция team/////// */
-.team {
+.section--otherbackground {
     background-color: #f5f4fa;
 }
 
-.team__list {
+.team {
     display: flex;
     margin-top: 50px;
 }
@@ -29,7 +29,7 @@
     padding-bottom: 30px;
 }
 
-.team__name {
+.team__title {
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -38,7 +38,7 @@
     text-align: center;
 }
 
-.team__position {
+.team__text {
     margin-bottom: 16px;
 
     font-size: 16px;

@@ -18,9 +18,17 @@
 .logo__label--black {
     color: #000000;
     transition: color var(--anim-main);
+
+    &:hover {
+        color: var(--accent-text-color);
+    }
 }
 
 .logo__label--white {
     color: var(--white-text-color);
     transition: color var(--anim-main);
+
+    &:hover {
+        color: var(--accent-text-color);
+    }
 }

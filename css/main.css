@@ -47,14 +47,14 @@ p {
 }
 
 /* Убираем нижнее подчеркивание с ссылок */
-.link {
+a {
   text-decoration: none;
   -webkit-transition: color var(--anim-main);
   transition: color var(--anim-main);
 }
 
 /* Убираем отступы и маркеры на списках */
-.list {
+ul {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -77,8 +77,8 @@ img {
 }
 
 /* Ховер и фокус для всех ссылок.*/
-.link:hover,
-.link:focus {
+a:hover,
+a:focus {
   color: var(--accent-text-color);
 }
 
@@ -98,7 +98,7 @@ img {
 }
 
 /* Общий шрифт для h2 */
-.title {
+.section__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -142,11 +142,17 @@ img {
   -webkit-transition: color var(--anim-main);
   transition: color var(--anim-main);
 }
+.logo__label--black:hover {
+  color: var(--accent-text-color);
+}
 
 .logo__label--white {
   color: var(--white-text-color);
   -webkit-transition: color var(--anim-main);
   transition: color var(--anim-main);
+}
+.logo__label--white:hover {
+  color: var(--accent-text-color);
 }
 
 /* Добавляем флексы на навигацию */
@@ -209,7 +215,7 @@ img {
 }
 
 /* Добавляем флексы на контакты в хедере */
-.header__contacts-list {
+.contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,13 +225,12 @@ img {
   margin-left: auto;
 }
 
-.header__contacts-item:not(:last-child) {
+.contacts__item:not(:last-child) {
   margin-right: 30px;
 }
 
 /* Контакты в хедере */
-.header__phone,
-.header__mail {
+.contacts__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,7 +249,7 @@ img {
   transition: color var(--anim-main);
 }
 
-.header__icon {
+.contacts__icon {
   fill: currentColor;
   margin-right: 10px;
   -webkit-transition: fill var(--anim-main);
@@ -306,7 +311,7 @@ img {
 }
 
 /* //////Секция features//////// */
-.features__list {
+.features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,10 +320,10 @@ img {
           justify-content: space-between;
 }
 
-.feature__item {
+.features__item {
   margin-right: 30px;
 }
-.feature__item:last-child {
+.features__item:last-child {
   margin-right: 0;
 }
 
@@ -339,7 +344,7 @@ img {
   margin-bottom: 30px;
 }
 
-.feature__title {
+.features__title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -348,7 +353,7 @@ img {
   color: var(--primary-text-color);
 }
 
-.feature__text {
+.features__text {
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-text-color);
@@ -356,11 +361,11 @@ img {
 
 /* //////Секция Services////// */
 /* Флексы для секции services*/
-.services {
+.section--nopaddingtop {
   padding-top: 0;
 }
 
-.services__list {
+.services {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,11 +408,11 @@ img {
 }
 
 /* //////Секция team/////// */
-.team {
+.section--otherbackground {
   background-color: #f5f4fa;
 }
 
-.team__list {
+.team {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,7 +439,7 @@ img {
   padding-bottom: 30px;
 }
 
-.team__name {
+.team__title {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -442,7 +447,7 @@ img {
   text-align: center;
 }
 
-.team__position {
+.team__text {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
@@ -499,7 +504,7 @@ img {
 }
 
 /* Секция Постоянные клиенты */
-.cliens__list {
+.clients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

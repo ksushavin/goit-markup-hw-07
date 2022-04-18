@@ -9,13 +9,13 @@ p {
 }
 
 /* Убираем нижнее подчеркивание с ссылок */
-.link {
+a {
     text-decoration: none;
     transition: color var(--anim-main);
 }
 
 /* Убираем отступы и маркеры на списках */
-.list {
+ul {
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;

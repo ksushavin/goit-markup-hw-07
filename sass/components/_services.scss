@@ -1,11 +1,11 @@
 /* //////Секция Services////// */
 
 /* Флексы для секции services*/
-.services {
+.section--nopaddingtop {
     padding-top: 0;
 }
 
-.services__list {
+.services {
     display: flex;
     margin-top: 50px;
     justify-content: space-between;
